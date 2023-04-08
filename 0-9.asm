@@ -13,8 +13,7 @@ looping:
 	add rax, 1		; Increment rax
 	push rax		; Push new value to the stack
 	cmp rax, 9		; Compare rax to 9
-	jg exit			; Jump to exit if rax > 9
-	jmp looping		; Jump to start of the loop if not
+	jle looping		; Jump to start of the loop if less or equal to 9
 
 exit:
 	mov rax, 60		; Exit with status 0
